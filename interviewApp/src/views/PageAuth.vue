@@ -69,7 +69,7 @@ const signIn = async (): Promise<void> => {
     <div class="text-center mb-3">
       <div class="text-900 text-3xl font-medium mb-3">Приветствую!</div>
       <span class="text-600 font-medium line-height-3"> {{ subtitleText }}</span>
-      <a class="font-medium no-underline ml-2 text-blue-500 cursor-pointer" @click="toggleAuth">
+      <a class="font-medium ml-2 cursor-pointer" @click="toggleAuth">
       {{ linkAccountText }}
       </a>
     </div>
@@ -92,3 +92,9 @@ const signIn = async (): Promise<void> => {
   </div>
   </div>
 </template>
+
+<style scoped>
+a {
+  color: blue;
+}
+</style>
