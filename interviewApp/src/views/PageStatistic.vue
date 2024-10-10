@@ -7,13 +7,13 @@ import {getFirestore,
   getDocs,
 } from "firebase/firestore"
 import {useUserStore} from "@/stores/user"
-import { IInterview } from '@/interfaces'
+import type { IInterview } from '@/interfaces'
 
 const userStore = useUserStore();
 const db = getFirestore();
 const interviews = ref<IInterview[]>([]);
 const chartData = ref();
-const chartOptions = ref(null);
+const chartOptions = ref<null | object>(null);
 
 const getAllInterviews = async <T extends IInterview>(): Promise<T[]> => {
   const getData = query(
